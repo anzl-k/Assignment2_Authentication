@@ -1,33 +1,42 @@
 <%- include('partials/header') %>
 <%- include('partials/navbar') %>
 
+<!-- Contact List Header -->
+<section class="text-center py-5 bg-light">
+    <h1 class="display-4">Contact List</h1>
+    <p class="lead">Manage contacts efficiently and easily.</p>
+</section>
+
 <section class="py-5">
     <div class="container">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Number</th>
-                    <th>Email</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% contacts.forEach(contact => { %>
+        <!-- Contact Table -->
+        <div class="table-responsive shadow rounded">
+            <table class="table table-hover">
+                <thead class="bg-primary text-white">
                     <tr>
-                        <td><%= contact.name %></td>
-                        <td><%= contact.number %></td>
-                        <td><%= contact.email %></td>
-                        <td>
-                            <a href="/contacts/update/<%= contact.id %>" class="btn btn-primary">Update</a>
-                            <form style="display:inline;" action="/contacts/delete/<%= contact.id %>" method="post">
-                                <button type="submit" class="btn btn-danger">Delete</button>
-                            </form>
-                        </td>
+                        <th>Name</th>
+                        <th>Number</th>
+                        <th>Email</th>
+                        <th>Actions</th>
                     </tr>
-                <% }); %>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <% contacts.forEach(contact => { %>
+                        <tr>
+                            <td><%= contact.name %></td>
+                            <td><%= contact.number %></td>
+                            <td><%= contact.email %></td>
+                            <td>
+                                <a href="/contacts/update/<%= contact.id %>" class="btn btn-outline-secondary btn-sm mr-2">Update</a>
+                                <form style="display:inline;" action="/contacts/delete/<%= contact.id %>" method="post">
+                                    <button type="submit" class="btn btn-outline-danger btn-sm">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    <% }); %>
+                </tbody>
+            </table>
+        </div>
     </div>
 </section>
 

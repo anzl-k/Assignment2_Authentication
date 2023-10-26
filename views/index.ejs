@@ -1,69 +1,67 @@
 <%- include('partials/header') %>
 <%- include('partials/navbar') %>
 
-<!-- Profile Section -->
-<section class="text-center py-5 ">
-    <img src="images/profile-picture.jpg" alt="Profile Picture" class="rounded-circle" style="width:150px; border-style: groove;">
-    <h1>Bonish Timsina - Aspiring Software Engineer</h1>
-    <a href="/contact" class="btn btn-primary mt-2">Contact Me</a>
-</section>
-
-<!-- Hero Section -->
-<section class="py-5 bg-light">
-    <div class="container">
-        <p>A tech-enthusiast and software engineering student with a keen interest in programming and problem-solving. Currently honing my skills at Centennial College, Toronto.</p>
-        <a href="/projects" class="btn btn-secondary">View My Projects</a>
+<!-- Hero Image -->
+<section>
+    <div class="hero-image">
+        <img src="images/hero-background.jpg" alt="Hero Background">
     </div>
 </section>
 
-<!-- Featured Projects Section -->
+<!-- Profile Section -->
+<section class="text-center py-5">
+    <div class="profile">
+        <img src="images/profile-picture.jpg" alt="Profile Picture" class="rounded-circle" style="width:150px;">
+        <h1>Anjal Katwal</h1>
+        <p>Software Engineering Student</p>
+        <a href="/contact" class="btn btn-primary btn-custom">Contact Me</a>
+        <a href="/projects" class="btn btn-secondary btn-custom">View Projects</a>
+    </div>
+</section>
+
+<!-- Skills Overview -->
 <section class="py-5">
     <div class="container">
-        <h2>Featured Projects</h2>
-        <br>
+        <h2 class="text-center">Skills Overview</h2>
         <div class="row">
-           
-            <div class="col-md-4">
-                <a href="https://github.com/bonish-timsina/CLI-stegano" target="_blank">
-                    <img src="/images/projectA.jpg" alt="Project 1" class="img-fluid">
-                    <h3>Stegano</h3>
-                </a>
+            <div class="col-md-3 text-center">
+                <i class="fab fa-python skill-icon"></i>
+                <p>Python</p>
             </div>
-            <div class="col-md-4">
-                <a href="https://github.com/bonish-timsina/mastermind" target="_blank">
-                    <img src="/images/projectA.jpg" alt="Project 2" class="img-fluid">
-                    <h3>MasterMind</h3>
-                </a>
+            <div class="col-md-3 text-center">
+                <i class="fab fa-js-square skill-icon"></i>
+                <p>JavaScript</p>
             </div>
-            <div class="col-md-4">
-                <a href="https://github.com/bonish-timsina/WeatherApp-not-started-yet" target="_blank">
-                    <img src="/images/weather-icon.png" alt="Project 3" class="img-fluid">
-                    <h3>WeatherApp</h3>
-                </a>
+            <div class="col-md-3 text-center">
+                <i class="fab fa-java skill-icon"></i>
+                <p>Java</p>
             </div>
-            
         </div>
     </div>
 </section>
 
-<!-- Skills Overview Section -->
-<section class="bg-light py-5 tex">
+<!-- Projects Section -->
+<section class="py-5 bg-light">
     <div class="container">
-        <h2>Skills Overview</h2>
-        <br>
+        <h2 class="text-center">Featured Projects</h2>
         <div class="row">
-            
-            <div class="col-md-3 text-center">
-                <i class="fab fa-python fa-3x"></i>
-                <p>Python</p>
+            <div class="col-md-4 project-thumbnail">
+                <a href="https://github.com/Anjal-Katwal/CLI-stegano" target="_blank">
+                    <img src="/images/projectA.jpg" alt="Stegano Project" class="img-fluid">
+                    <h3 class="text-center">Stegano</h3>
+                </a>
             </div>
-            <div class="col-md-3 text-center">
-                <i class="fab fa-js fa-3x"></i> 
-                <p>JavaScript</p>
+            <div class="col-md-4 project-thumbnail">
+                <a href="https://github.com/Anjal-Katwal/mastermind" target="_blank">
+                    <img src="/images/projectB.jpg" alt="MasterMind Project" class="img-fluid">
+                    <h3 class="text-center">MasterMind</h3>
+                </a>
             </div>
-            <div class="col-md-3 text-center">
-                <i class="fab fa-java fa-3x"></i> 
-                <p>Java</p>
+            <div class="col-md-4 project-thumbnail">
+                <a href="https://github.com/Anjal-Katwal/WeatherApp-not-started-yet" target="_blank">
+                    <img src="/images/weather-icon.png" alt="WeatherApp Project" class="img-fluid">
+                    <h3 class="text-center">WeatherApp</h3>
+                </a>
             </div>
         </div>
     </div>

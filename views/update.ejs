@@ -1,27 +1,42 @@
 <%- include('partials/header') %>
 <%- include('partials/navbar') %>
 
+<!-- Contact Update Header Section -->
+<section class="text-center py-5 bg-light">
+    <h1 class="display-4">Update Contact</h1>
+    <p class="lead">Modify the contact details</p>
+</section>
+
 <section class="py-5">
     <div class="container">
-        <form action="/contacts/update/<%= contact.id %>" method="post">
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name" value="<%= contact.name %>" required>
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <!-- Card for Update Form -->
+                <div class="card shadow p-4 rounded">
+                    <form action="/contacts/update/<%= contact.id %>" method="post">
+                        <div class="mb-4">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" value="<%= contact.name %>" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="number" class="form-label">Number</label>
+                            <input type="text" class="form-control" id="number" name="number" value="<%= contact.number %>" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" value="<%= contact.email %>" required>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-primary">Update</button>
+                            <a href="/contacts" class="btn btn-secondary">Cancel</a>
+                            <form style="display:inline;" action="/contacts/delete/<%= contact.id %>" method="post">
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </form>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="number" class="form-label">Number</label>
-                <input type="text" class="form-control" id="number" name="number" value="<%= contact.number %>" required>
-            </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" value="<%= contact.email %>" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Update</button>
-            <a href="/contacts" class="btn btn-secondary">Cancel</a>
-            <form style="display:inline;" action="/contacts/delete/<%= contact.id %>" method="post">
-                <button type="submit" class="btn btn-danger">Delete</button>
-            </form>
-        </form>
+        </div>
     </div>
 </section>
 

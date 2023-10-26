@@ -1,29 +1,75 @@
 /* 
 File name: styles.css
-Student’s Name: Bonish Timsina
- 
+Student’s Name: Anjal Katwal
+StudentID: 301274617  
+Date: 08/10/2023 
 */
 
-body {
-    font-family: Arial, sans-serif;
-}
+ body {
+        font-family: 'Lato', sans-serif;
+        background-color: #F9F9F9;
+    }
 
 h1, h2, h3 {
     color: #333; 
+    
 }
+
+.container {
+        max-width: 1100px;
+    }
+ h1, h2, h3, p {
+        margin-bottom: 15px;
+    }
 .bg-dark.text-white, .bg-dark.text-white h2 {
     color: white;
 }
 
+/* Hero Image */
+    .hero-image img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Profile */
+    .profile img {
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+        transition: transform 0.4s ease;
+    }
+
+    .profile img:hover {
+        transform: scale(1.08);
+    }
+
+    
+
+    /* Skills */
+    .skill-icon {
+        font-size: 50px;
+        margin-bottom: 15px;
+    }
+
+
 .btn-primary {
     background-color: #2c3e50;
     border-color: #2c3e50;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .bg-light {
     background-color: #f4f4f4;
 }
+/* Project Thumbnails */
+    .project-thumbnail img {
+        transition: transform 0.4s ease;
+    }
 
+.project-thumbnail img:hover {
+        transform: translateY(-8px);
+    }
 
 /* Project page */
 

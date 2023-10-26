@@ -2,67 +2,64 @@
 <%- include('partials/navbar') %>
 
 <!-- Title and Subtitle -->
-<section class="text-center py-5">
-    <h1>My Projects</h1>
-    <p>Showcasing my journey in software development, one project at a time.</p>
+<section class="text-center py-5 bg-light">
+    <h1 class="display-4">My Projects</h1>
+    <p class="lead">Showcasing my journey in software development, one project at a time.</p>
 </section>
 
-
-
 <!-- Project Cards/Listings -->
-<section class="py-5">
+<section class="py-5 bg-white">
     <div class="container">
         <div class="row">
-            <!-- Project 1 -->
-            <div class="col-md-4">
-                <div class="project-card">
-                    <img src="/images/projectA.jpg" alt="Project 1 Thumbnail" class="img-fluid">
-                    <h3>Stegano</h3>
-                    <p>
-                        simple stegano to hide and reveal messages from images</p>
-                    <ul class="tech-icons">
-                        <li><i class="fab fa-python"></i></li>
-                        
-                    </ul>
-                    
-                    <a href="https://github.com/bonish-timsina/CLI-stegano" target="_blank" class="btn btn-dark btn-sm">GitHub</a>
+            <!-- Each Project Card -->
+            <% const projects = [
+                {
+                    image: '/images/projectA.jpg',
+                    title: 'Stegano',
+                    description: 'simple stegano to hide and reveal messages from images',
+                    icons: ['fab fa-python'],
+                    link: 'https://github.com/Anjal-Katwal/CLI-stegano'
+                },
+                {
+                    image: '/images/projectB.jpg',
+                    title: 'MasterMind',
+                    description: 'This game is a Python implementation of the classic board game "Mastermind."',
+                    icons: ['fab fa-python'],
+                    link: 'https://github.com/Anjal-Katwal/mastermind'
+                },
+                {
+                    image: '/images/weather-icon.png',
+                    title: 'WeatherApp',
+                    description: 'Real-time weather application using OpenWeatherMap API',
+                    icons: ['fab fa-js', 'fab fa-node'],
+                    link: 'https://github.com/Anjal-Katwal/WeatherApp-not-started-yet'
+                }
+            ] %>
+            <% projects.forEach(project => { %>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="<%= project.image %>" alt="<%= project.title %> Thumbnail" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title"><%= project.title %></h5>
+                        <p class="card-text"><%= project.description %></p>
+                        <ul class="tech-icons list-inline">
+                            <% project.icons.forEach(icon => { %>
+                            <li class="list-inline-item mx-2"><i class="<%= icon %>"></i></li>
+                            <% }) %>
+                        </ul>
+                        <a href="<%= project.link %>" target="_blank" class="btn btn-outline-dark btn-sm mt-2">GitHub</a>
+                    </div>
                 </div>
             </div>
-            <!-- Project 2 -->
-            <div class="col-md-4">
-                <div class="project-card">
-                    <img src="/images/projectB.jpg" alt="Project 1 Thumbnail" class="img-fluid">
-                    <h3>MasterMind</h3>
-                    <p>This game is a Python implementation of the classic board game "Mastermind."</p>
-                    <ul class="tech-icons">
-                        <li><i class="fab fa-python"></i></li>
-                        
-                    </ul>
-                    
-                    <a href="https://github.com/bonish-timsina/mastermind" target="_blank" class="btn btn-dark btn-sm">GitHub</a>
-                </div>
-            </div>
-            <!-- Project 3-->
-            <div class="col-md-4">
-                <div class="project-card">
-                    <img src="/images/weather-icon.png" alt="Project 2 Thumbnail" class="img-fluid">
-                    <h3>WeatherApp</h3>
-                    <p>Real-time weather application using OpenWeatherMap API</p>
-                    <ul class="tech-icons">
-                        <li><i class="fab fa-js"></i></li>
-                        <li><i class="fab fa-node"></i></li>
-                    </ul>
-                    <a href="https://github.com/bonish-timsina/WeatherApp-not-started-yet" target="_blank" class="btn btn-dark btn-sm">GitHub</a>
-                </div>
-            </div>
+            <% }) %>
         </div>
     </div>
 </section>
 
-<!-- Call to Action  -->
-<section class="text-center py-5 bg-light">
-    <p>Interested in collaborating on a project? Let's chat!</p>
-    <a href="/contact" class="btn btn-primary">Contact Me</a>
+<!-- Call to Action -->
+<section class="text-center py-5">
+    <p class="lead">Interested in collaborating on a project? Let's chat!</p>
+    <a href="/contact" class="btn btn-primary btn-lg">Contact Me</a>
 </section>
 
 <%- include('partials/footer') %>
