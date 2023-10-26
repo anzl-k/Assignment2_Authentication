@@ -1,0 +1,63 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<!-- Contact Page Header -->
+<section class="text-center py-5">
+    <h1>Contact Me</h1>
+</section>
+
+<!-- Brief Introduction -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <p>I'm always eager to connect, collaborate, or hear about opportunities. If you have something in mind, let's get in touch!</p>
+    </div>
+</section>
+
+<!-- Contact Form -->
+<section class="py-5">
+    <div class="container">
+        <form action="/contact-submit" method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" class="form-control" id="subject" name="subject">
+            </div>
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+            </div>
+            
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- Alternative Contact Methods -->
+<section class="py-4 bg-light">
+    <div class="container">
+        <p>Prefer to email directly? Reach out at <a href="mailto:btimsina@my.centennialcollege.ca.com">btimsina@my.centennialcollege.ca.com</a></p>
+       
+    </div>
+</section>
+
+<!-- Social Media & Professional Links -->
+<section class="py-5">
+    <div class="container text-center">
+        
+        <a href="https://np.linkedin.com/in/bonish-timsina-9065681b5" target="_blank" class="mx-2"><i class="fab fa-linkedin fa-2x"></i></a>
+        <a href="https://github.com/bonish-timsina" target="_blank" class="mx-2"><i class="fab fa-github fa-2x"></i></a>
+        <a href="https://www.instagram.com/bonish/" target="_blank" class="mx-2"><i class="fab fa-instagram fa-2x"></i></a>
+        
+    </div>
+</section>
+
+<%- include('partials/footer') %>

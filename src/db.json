@@ -1,0 +1,19 @@
+{
+  "user": {
+    "username": "admin",
+    "password": "password123"
+  },
+  "contacts": [
+    {"id": 1, "name": "Amit Sharma", "number": "987-654-3210", "email": "amit.sharma@example.com"},
+    {"id": 2, "name": "Bhavna Patel", "number": "876-543-2109", "email": "bhavna.patel@example.com"},
+    {"id": 3, "name": "Chetan Kumar", "number": "765-432-1098", "email": "chetan.kumar@example.com"},
+    {"id": 4, "name": "Deepa Iyer", "number": "654-321-0987", "email": "deepa.iyer@example.com"},
+    {"id": 5, "name": "Esha Gupta", "number": "543-210-9876", "email": "esha.gupta@example.com"},
+    {"id": 6, "name": "Farhan Malik", "number": "432-109-8765", "email": "farhan.malik@example.com"},
+    {"id": 7, "name": "Geeta Verma", "number": "321-098-7654", "email": "geeta.verma@example.com"},
+    {"id": 8, "name": "Harsh Singh", "number": "210-987-6543", "email": "harsh.singh@example.com"},
+    {"id": 9, "name": "Isha Mehta", "number": "109-876-5432", "email": "isha.mehta@example.com"},
+    {"id": 10, "name": "Jatin Arora", "number": "098-765-4321", "email": "jatin.arora@example.com"}
+]
+
+}

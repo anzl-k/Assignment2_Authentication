@@ -1,0 +1,72 @@
+<%- include('partials/header') %>
+<%- include('partials/navbar') %>
+
+<!-- Profile Section -->
+<section class="text-center py-5 ">
+    <img src="images/profile-picture.jpg" alt="Profile Picture" class="rounded-circle" style="width:150px; border-style: groove;">
+    <h1>Bonish Timsina - Aspiring Software Engineer</h1>
+    <a href="/contact" class="btn btn-primary mt-2">Contact Me</a>
+</section>
+
+<!-- Hero Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <p>A tech-enthusiast and software engineering student with a keen interest in programming and problem-solving. Currently honing my skills at Centennial College, Toronto.</p>
+        <a href="/projects" class="btn btn-secondary">View My Projects</a>
+    </div>
+</section>
+
+<!-- Featured Projects Section -->
+<section class="py-5">
+    <div class="container">
+        <h2>Featured Projects</h2>
+        <br>
+        <div class="row">
+           
+            <div class="col-md-4">
+                <a href="https://github.com/bonish-timsina/CLI-stegano" target="_blank">
+                    <img src="/images/projectA.jpg" alt="Project 1" class="img-fluid">
+                    <h3>Stegano</h3>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="https://github.com/bonish-timsina/mastermind" target="_blank">
+                    <img src="/images/projectA.jpg" alt="Project 2" class="img-fluid">
+                    <h3>MasterMind</h3>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="https://github.com/bonish-timsina/WeatherApp-not-started-yet" target="_blank">
+                    <img src="/images/weather-icon.png" alt="Project 3" class="img-fluid">
+                    <h3>WeatherApp</h3>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- Skills Overview Section -->
+<section class="bg-light py-5 tex">
+    <div class="container">
+        <h2>Skills Overview</h2>
+        <br>
+        <div class="row">
+            
+            <div class="col-md-3 text-center">
+                <i class="fab fa-python fa-3x"></i>
+                <p>Python</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="fab fa-js fa-3x"></i> 
+                <p>JavaScript</p>
+            </div>
+            <div class="col-md-3 text-center">
+                <i class="fab fa-java fa-3x"></i> 
+                <p>Java</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<%- include('partials/footer') %>
